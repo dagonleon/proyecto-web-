@@ -29,7 +29,9 @@
 /* Tarjetas estilo Glassmorphism */
 
 /* ------------------------------------------- */
-
+.txt-is-red{
+  color: #da2c4d !important;
+}
 .para-seo{
   display: none;
 }
@@ -5154,7 +5156,7 @@ fieldset[disabled] .select select:hover {
 
 .breadcrumb a {
   align-items: center;
-  color: #00c179;
+  color: #da2c4d;
   display: flex;
   justify-content: center;
   padding: 0 0.75em;

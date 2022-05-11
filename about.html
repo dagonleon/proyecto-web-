@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	<link rel="script" href="./js/index.js" />
 	<link rel="shortcut icon" type="image/png" href="./img/logo.png" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/octoshrimpy/bulma-o-steps/master/bulma-steps.css"/>
 	<script src="./js/main.js"></script>
 	<script src="https://kit.fontawesome.com/6bc02a6bab.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -17,63 +19,41 @@
 
 <body id="about" class="light">
 	<!-- menu -->
-	<nav class="navbar is-white" aria-label="main navigation">
-		<div class="navbar-brand">
-			<div class="navbar-item">
-				<a href="./index.html"><img src="./img/logo.png" height="30" alt="CFinVET_icon"></a>
-			</div>
-			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarStart">
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
+	<nav class="navbar is-fixed-top">
+		<div class="container">
+		  <div class="navbar-brand animated pulse">
+			<a class="navbar-item" data-anchor="page-top" data-active="false">
+			  <img src="/img/logo-black.png" alt="Logo CFTrainVET">
 			</a>
-		</div>
-		<div id="navbarStart" class="navbar-menu">
-			<div class="navbar-start">
-				<a class="navbar-item hover-underline-animation" href="./index.html">
-					<span class="icon-text">
-						<span class="icon icon-navbar-item">
-							<i class="fa-solid fa-home"></i>
-						</span>
-						<span>Home</span>
-					</span>
-				</a>
-
-				<a class="navbar-item hover-underline-animation" href="./about.html">
-					<span class="icon-text">
-						<span class="icon icon-navbar-item">
-							<i class="fa-solid fa-question"></i>
-						</span>
-						<span>About</span>
-					</span>
-				</a>
-				<a class="navbar-item hover-underline-animation" href="./partners.html">
-					<span class="icon-text">
-						<span class="icon icon-navbar-item">
-							<i class="fa-solid fa-user-group"></i>
-						</span>
-						<span>Partners</span>
-					</span>
-				</a>
-
-				<a class="navbar-item hover-underline-animation" href="./activities.html">
-					<span class="icon-text">
-						<span class="icon icon-navbar-item">
-							<i class="fa-solid fa-leaf"></i>
-						</span>
-						<span>Activities</span>
-					</span>
-				</a>
-
+			<span class="navbar-burger burger animated pulse" data-target="navbarMenu">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</span>
+		  </div>
+		  <div id="navbarMenu" class="navbar-menu">
+			<div class="navbar-end">
+			  <a class="navbar-item underline-animation" href="./index.html">
+				home
+			  </a>
+			  <a class="navbar-item underline-animation" href="./about.html">
+				about
+			  </a>
+			  <a class="navbar-item underline-animation" href="./partners.html">
+				partners
+			  </a>
+			  <a class="navbar-item underline-animation" href="./activities.html">
+				activities
+			  </a>
 			</div>
+		  </div>
 		</div>
-	</nav>
+	  </nav>
 	<div class="navbar-end">
 	</div>
 
 	<br><br>
 	<div class="container is-max-desktop">
-		<div class="heading-title">ABOUT PROJECT</div>
 		<h2 class="title is-1 has-text-centered heading-main-title">About the project</h2>
 	</div>
 	<br>
@@ -88,7 +68,6 @@
 	<br><br><br>
 	<!-- descripción -->
 	<div id="description">
-		<img class="footer-waves" src="./img/bg/wavy-dark.png" alt="footer waves">
 		<section class="hero hero-is-primary">
 			<div class="hero-body has-text-centered">
 				<div class="container is-max-desktop">
@@ -103,7 +82,6 @@
 				</div>
 			</div>
 		</section>
-		<img class="footer-waves-inverted" src="./img/bg/wavy-dark-inverted-2.png" alt="footer waves">
 	</div>
 
 	<!-- círculos -->
@@ -116,9 +94,9 @@
 					<i class="fa-solid fa-money-bill-wave fa-2x"></i>
 				</div>
 				<div class="stat-count">
-					<h2 class="title is-3 is-txt-primary">116,998.00<small>€</small></h2>
+					<h2 class="title is-3 txt-is-red">116,998.00<small>€</small></h2>
 				</div>
-				<p>Erasmus+ grant</p>
+				<br>
 			</div>
 		</div>
 		<div class="column is-4">
@@ -127,9 +105,9 @@
 					<i class="fa-solid fa-hashtag fa-2x"></i>
 				</div>
 				<div class="stat-count">
-					<h2 class="title is-3 is-txt-primary">2020-1-ES01-KA202-081865</h2>
+					<h2 class="title is-3 txt-is-red">2020-1-ES01-KA202-081865</h2>
 				</div>
-				<p>Project reference number</p>
+				<br>
 			</div>
 		</div>
 		<div class="column is-4">
@@ -138,9 +116,9 @@
 					<i class="fa-solid fa-users fa-2x"></i>
 				</div>
 				<div class="stat-count">
-					<h2 class="title is-3 is-txt-primary">6</h2>
+					<h2 class="title is-3 txt-is-red">6</h2>
 				</div>
-				<p>Partners</p>
+				<p class="txt-is-red">Partners</p>
 			</div>
 		</div>
 	</div>
@@ -148,100 +126,84 @@
 
 	<br><br><br>
 	<!-- timeline	 -->
-	<div class="timeline is-centered" id="timeline">
-		<header class="timeline-header">
-			<span class="tag is-medium bg-icon-9">Start</span>
-		</header>
-		<div class="timeline-item is-dark"></div>
-		<header class="timeline-header">
-			<span class="tag bg-icon-8">2020</span>
-		</header>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-icon is-primary"></div>
-			<div class="timeline-content">
-				<p class="heading">March 2020</p>
-				<p>Project application to Erasmus+</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">September 2020</p>
-				<p>Project approval notification</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">October 2020</p>
-				<p>Start of the project. 1st Carbon Footprint Calculation</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">November 2020-June 2021</p>
-				<p>Online collaboration on partners, CF calculation and reduction</p>
-			</div>
-		</div>
-		<header class="timeline-header">
-			<span class="tag bg-icon-8">2021</span>
-		</header>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">October 2021</p>
-				<p>1st Transnational Meeting in Pamplona (Spain)</p>
-			</div>
-		</div>
-		<header class="timeline-header">
-			<span class="tag bg-icon-8">2022</span>
-		</header>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">March 2022</p>
-				<p>I Exchange Activity in Bolzen (Italy)</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">May 2022</p>
-				<p>II Exchange Activity in Wolfsberg (Austria)</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">September 2022</p>
-				<p>III Exchange Activity in Sandviken (Sweden)</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">November 2022</p>
-				<p>IV Exchange Activity and Final Transnational meeting in Pamplona (Spain)</p>
-			</div>
-		</div>
-		<div class="timeline-item is-dark">
-			<div class="timeline-marker is-primary is-icon"></div>
-			<div class="timeline-content">
-				<p class="heading">December 2022</p>
-				<p>End of the project</p>
-			</div>
-		</div>
-		<header class="timeline-header">
-			<span class="tag is-medium bg-icon-9"><i class="fa-solid fa-flag-checkered"></i></span>
-		</header>
+	<ul class="steps has-content-centered">
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Start</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 2</p>
+			<p>This is the second step. Once you complete the first step, you will end up here.</p>
+		  </div>
+		</li>
+		<li class="steps-segment is-active">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 3</p>
+			<p>This is the third step. This is halfway between the start and the end.</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 4</p>
+			<p>The fourth step. Nearly there!</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 5</p>
+			<p>And finally the last step. You have successfully completed all 5 steps.</p>
+		  </div>
+		</li>
+	  </ul>
+	  <br><br><br>
 
-	</div>
+	  <ul class="steps has-content-centered">
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 6</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 7</p>
+			<p>This is the second step. Once you complete the first step, you will end up here.</p>
+		  </div>
+		</li>
+		<li class="steps-segment is-active">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 8</p>
+			<p>This is the third step. This is halfway between the start and the end.</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 9</p>
+			<p>The fourth step. Nearly there!</p>
+		  </div>
+		</li>
+		<li class="steps-segment">
+		  <span class="steps-marker"></span>
+		  <div class="steps-content">
+			<p class="is-size-4">Step 10</p>
+			<p>And finally the last step. You have successfully completed all 5 steps.</p>
+		  </div>
+		</li>
+	  </ul>
 	<br><br><br>
 
 	<br>
 	<br>
-	<img class="footer-waves" src="./img/bg/wavy-grey.png" alt="footer waves">
 	<div class="hero">
 		<div class="hero-body hero-is-grey">
 			<div class="container is-max-desktop">
@@ -286,7 +248,6 @@
 
 		</div>
 	</div>
-	<img class="footer-waves-inverted" src="./img/bg/wavy-grey-inverted.png" alt="footer waves">
 
 
 	<!-- <div class="hero ">
@@ -433,7 +394,6 @@
 
 
 	<!-- Footer Start -->
-	<img class="footer-waves" src="./img/bg/wavy-dark.png" alt="footer waves">
 	<footer class="footer footer-dark">
 		<div class="container is-max-desktop">
 			<div class="columns">
