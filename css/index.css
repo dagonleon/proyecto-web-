@@ -20,12 +20,17 @@
   font-family: productsans;
   src: url("../Product\ Sans\ Regular.ttf")
 }
-
-
 /* Responsive */
 
 @media only screen and (max-width: 600px) {
-  
+  .roadmap-desktop{
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .roadmap-mobile{
+    display: none;
+  }
 }
 /* ---------------------------------------- */
 
@@ -221,9 +226,9 @@ body.light .progress-wrap svg.progress-circle path {
   background-color: var(--secondary);
 }
 
-.partners-section {
+/* FAQ */
 
-}
+/* End FAQ */
 
 /* MENU INICIO*/
 
@@ -12198,4 +12203,22 @@ form{
   margin-top: 40px;
   margin-bottom: 40px;
   z-index: 2;
+  border: solid black;
+  padding: 10px;;
+}
+input[type="text"]{
+  font-size: 15px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #cac7c7;
+  transition: border-bottom 0.3s ease-in, width 0.8s ease-in-out;
+  transition-delay: 0.2s;
+  width: 40%;
+}
+input[type="text"]:focus{
+  outline: none;
+  border-bottom: 2px solid black;
+  width: 75%;
 }
