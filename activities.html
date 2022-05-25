@@ -11,14 +11,15 @@
       <script src="./js/main.js"></script>
       <script src="https://kit.fontawesome.com/6bc02a6bab.js" crossorigin="anonymous"></script>
   </head>
-  <body id="activities" class="light">
+  <body id="body" class="light light-mode">
     <!-- menu -->
     <nav class="navbar is-fixed-top">
 			<div class="container">
 			  <div class="navbar-brand animated pulse">
-				<a class="navbar-item" data-anchor="page-top" data-active="false">
-				  <img src="./img/logo-black.png" alt="Logo CFTrainVET">
-				</a>
+          <a href="#activities" class="navbar-item" data-anchor="page-top" data-active="false">
+						<img class="black-image"src="./img/logo-black.png" alt="Logo CFTrainVET">
+						<img class="white-image none" src="./img/logo-white.png" alt="Logo CFTrainVET">
+					</a>
 				<span class="navbar-burger burger animated pulse" data-target="navbarMenu">
 				  <span></span>
 				  <span></span>
@@ -36,6 +37,7 @@
 				  <a class="navbar-item underline-animation" href="./activities.html">
 					activities
 				  </a>
+          <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Cambiar de modo">🌛</button>
 				</div>
 			  </div>
 			</div>
@@ -44,7 +46,8 @@
 <!-- inicio titulo -->
 <div class="container is-max-desktop">
   <h2 class="title is-1 has-text-centered">
-    <img src="./img/activities-header.png" alt="about the project | cftrainvet erasmus+">
+    <img class="black-image" src="./img/activities-header.png" alt="about the project | cftrainvet erasmus+">
+    <img class="white-image none" src="./img/activities-header-white.png" alt="about the project | cftrainvet erasmus+">
     <span class="para-seo">activities | ctrainvet erasmus+</span>
   </h2>
 </div>
