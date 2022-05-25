@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if ($navbarBurgers.length > 0) {
 
     // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
+    $navbarBurgers.forEach(el => {
       el.addEventListener('click', () => {
 
         // Get the target from the "data-target" attribute
@@ -75,3 +75,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==================================================== FAQ =============================================================
 
 // ================================================ Fin FAQ ==============================================================
+
+// ================================================ Formulario Si/No ==============================================================
+function myFunction() {
+  var checkBox = document.getElementById("respuesta");
+  var text = document.getElementById("text");
+
+  if (checkBox.checked == true) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+// ================================================ Fin Formulario Si/No ==============================================================
+
+// ================================================ Formulario tipo range ==============================================================
+var range = document.getElementById("rango");
+  var resp = document.getElementById("valor");
+  resp.innerHTML = range.value;
+
+rannge.oninput = function slider() {
+  resp.innerHTML = range.value;
+}
+// ================================================ Fin Formulario tipo range ==============================================================

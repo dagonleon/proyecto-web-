@@ -12,10 +12,9 @@
 	<script src="https://kit.fontawesome.com/6bc02a6bab.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"> -->
-</head>
+	<!-- <link rel="stylesheet" href="https://cdn -->
 
-<body id="index" class="light">
+<body id="index" class="light" onload="rangeNum()">
 	<!-- header - (nav + hero) -->
 	<section id="top" class="hero is-grey is-fullheight has-background">
 		<!-- navigation menu -->
@@ -58,15 +57,45 @@
 		<!-- background banner end -->
 
 		<!-- Start description + image-->
-		<h1>Formulario</h1>
 		<form>
-			<input type="text" id="name" name="name" required minlength="3"	>
+			<h1>Formulario medio ambiental </h1>
+			<label name="name">Nombre: </label>
+			<input type="text" id="surname" name="surname" placeholder="Introduce tu nombre">
 			<br>
-			<input type="text" id="name" name="name" required minlength="3"	>
+			<label name="name">Apellido: </label>
+			<input type="text" id="name" name="name" placeholder="Introduce tu apellido">
 			<br>
-			<input type="text" id="name" name="name" required minlength="3"	>
-			<input type="text" id="name" name="name" required minlength="3"	>
-			<input type="text" id="name" name="name" required minlength="3"	>
+			<label name="gmail">Correo electronico: </label>
+			<input type="text" id="gmail" name="gmail" placeholder="Introduce tu correo electronico">
+			<br>
+			<label name="fechaNac">Fecha de nacimiento</label>
+			<input type="date" name="fechaNac" value="fechaNac">
+			<br>
+			<br>
+			<label name="RangeEco">Del 0 al 10 que tan eco-friendly eres</label><br>
+			<input type="range" name="RangoEco" value="5" min="0" max="10" autocomplete="off" id="rango" list="valores">
+			<datalist id="valores">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</datalist>
+			<p>Valor: <span id="valor"></span></p>
+			<label>Formas o has formado parte de algun tipo de proyecto medio ambiental?</label>
+			<br>
+			<label>Si </label><input type="radio" id="respuesta" value="si" name="FomarParte" onclick="myFunction()"><br>
+			<label>No </label><input type="radio" id="respuesta" value="no" name="FomarParte" onclick="myFunction()">
+
+			
+			
+			<textarea id="text" style="display:none" rows="10" cols="80" placeholder="Cuentanos tu historia"></textarea>
 		</form>
 		<script>
 			(function ($) {
@@ -124,7 +153,8 @@
 					<div class="column is-two-fifths">
 						<h3 class="title is-5">ABOUT THE PROJECT</h3>
 						<p>CF Train in VET is a project whose main objective is to train future professionals in
-							sustainable skills based on the concept of Carbon Footprint calculation and reduction.</p>
+							sustainable skills based on the concept of Carbon Footprint calculation and reduction.
+						</p>
 					</div>
 					<div class="column is-offset-1">
 						<h3 class="title is-5">IN-SITE NAVIGATION</h3>
