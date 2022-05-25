@@ -7,12 +7,10 @@
 	<title> CFTrain in VET | Erasmus + </title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	<link rel="script" href="./js/index.js" />
-	<link rel="shortcut icon" type="image/png" href="./img/logo.png" />
+	<link rel="shortcut icon" type="image/png" href="./img/logo-black.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./js/main.js"></script>
 	<script src="https://kit.fontawesome.com/6bc02a6bab.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"> -->
 </head>
 
 <body id="index" class="light">
@@ -24,7 +22,7 @@
 			<div class="container">
 				<div class="navbar-brand animated pulse">
 					<a href="#index"class="navbar-item" data-anchor="page-top" data-active="false">
-						<img src="/img/logo-black.png" alt="Logo CFTrainVET">
+						<img src="./img/logo-black.png" alt="Logo CFTrainVET">
 					</a>
 					<span class="navbar-burger burger animated pulse" data-target="navbarMenu">
 						<span></span>
@@ -76,45 +74,49 @@
 	<!-- header end -->
 
 	<!-- Start greyed-out partner logos section  -->
-	<div class="container is-max-desktop">
+	<br><br>
 		<div class="columns">
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/cuatrovientos-gris.png" alt="cuatrovientos gris" />
+					<img src="./img/logos/partners/grey/cuatrovientos-gris.png" alt="cuatrovientos gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/stenum-gris.png" alt="stenum gris" />
+					<img src="./img/logos/partners/grey/stenum-gris.png" alt="stenum gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/max-valier-gris.png" alt="max valier gris" />
+					<img src="./img/logos/partners/grey/max-valier-gris.png" alt="max valier gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/htl-wolfsberg-gris.png" alt="wolfsberg gris" />
+					<img src="./img/logos/partners/grey/htl-wolfsberg-gris.png" alt="wolfsberg gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/goranssonska-skolan-gris.png" alt="goranssonska skolan gris" />
+					<img src="./img/logos/partners/grey/goranssonska-skolan-gris.png" alt="goranssonska skolan gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
 				<figure class="image is-128x128">
-					<img src="./img/cenifer-gris.png" alt="goranssonska skolan gris" />
+					<img src="./img/logos/partners/grey/cenifer-gris.png" alt="cenifer gris" />
 				</figure>
 			</div>
-			<div class="column is-one-seventh-mobile">
+			<div class="column">
+				<figure class="image is-128x128">
+					<img src="./img/logos/partners/grey/sandvik-gris.png" alt="sandvik gris" />
+				</figure>
+			</div>
+			<div class="column">
 
 			</div>
 		</div>
-	</div>
 
 	<br><br>
 	<!-- End partner logos section  -->
@@ -208,16 +210,17 @@
 		<!-- timeline	 -->
 		<div id="roadmap" class="container is-max-desktop">
 			<p class="has-text-centered title is-1">Roadmap</p>
-			<img src="./img/ROADMAP.png" alt="">
-
+			<img src="./img/ROADMAP.png" class="roadmap-desktop" alt="Project roadmap">
+			<img src="./img/ROADMAP-mobile.png" class="roadmap-mobile" alt="Project roadmap">
 		</div>
-		<br>
+		<br><br><br>
 	</section>
 
 	<section class="section section-grey">
 		<!-- Comienzo seccion -->
 		<div class="container is-max-desktop">
-			<h2 class="title is-1 has-text-centered">Our challenges and milestones</h2>
+
+			<h2 class="title is-1 has-text-centered">Otra sección a añadir</h2>
 		</div>
 
 		<!-- Fin seccion -->
@@ -230,53 +233,6 @@
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
 		</svg>
 	</div>
-
-	<script>
-		(function ($) {
-			"use strict";
-
-			//Switch dark/light
-
-			$(document).ready(function () {
-				"use strict";
-
-				//Scroll back to top
-
-				var progressPath = document.querySelector(".progress-wrap path");
-				var pathLength = progressPath.getTotalLength();
-				progressPath.style.transition = progressPath.style.WebkitTransition =
-					"none";
-				progressPath.style.strokeDasharray = pathLength + " " + pathLength;
-				progressPath.style.strokeDashoffset = pathLength;
-				progressPath.getBoundingClientRect();
-				progressPath.style.transition = progressPath.style.WebkitTransition =
-					"stroke-dashoffset 10ms linear";
-				var updateProgress = function () {
-					var scroll = $(window).scrollTop();
-					var height = $(document).height() - $(window).height();
-					var progress = pathLength - (scroll * pathLength) / height;
-					progressPath.style.strokeDashoffset = progress;
-				};
-				updateProgress();
-				$(window).scroll(updateProgress);
-				var offset = 50;
-				var duration = 550;
-				jQuery(window).on("scroll", function () {
-					if (jQuery(this).scrollTop() > offset) {
-						jQuery(".progress-wrap").addClass("active-progress");
-					} else {
-						jQuery(".progress-wrap").removeClass("active-progress");
-					}
-				});
-				jQuery(".progress-wrap").on("click", function (event) {
-					event.preventDefault();
-					jQuery("html, body").animate({ scrollTop: 0 }, duration);
-					return false;
-				});
-			});
-		})(jQuery);
-	</script>
-
 	<!-- upbutton end -->
 
 	<!-- footer -->
@@ -317,8 +273,8 @@
 						</div> -->
 					<!-- <div class="column"> -->
 					<figure class="image is-128x128">
-						<img class="footer-icon" src="./img/erasmus_logo.png" alt="Erasmus logo black">
-					</figure>
+							<img class="footer-icon" src="./img/logos/erasmus+/erasmus_logo.png" alt="Erasmus logo white">
+						</figure>
 					<!-- </div> -->
 					<!-- </div> -->
 
