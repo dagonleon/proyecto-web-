@@ -75,26 +75,74 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==================================================== FAQ =============================================================
 
 // ================================================ Fin FAQ ==============================================================
+// ================================================ Dark/Light mode  ===============================================
+function toggleDarkLight() {
+  // Cambiar la etiqueta del body
+  var body = document.getElementById("body");
+  var claseActual = body.className;
+  body.className = claseActual == "dark-mode" ? "light-mode" : "dark-mode";
+  claseActual = body.className
+
+  // Cambiar las imagenes negras por unas en blanco
+  if (claseActual == "dark-mode"){
+
+    var todasLasFotos = document.getElementsByTagName('img');
+    for(var i = 0; i < todasLasFotos.length ; i++) {
+      if (todasLasFotos[i].classList.contains('white-image')){
+        todasLasFotos[i].classList.remove('none')
+      } else if (todasLasFotos[i].classList.contains('black-image')){
+        todasLasFotos[i].classList.add('none')
+      }
+    }
+    var todosLosBotones = document.getElementsByTagName('button');
+      for(var i = 0; i < todosLosBotones.length ; i++) {
+      if(todosLosBotones[i].classList.contains('dark-mode-button')){
+        todosLosBotones[i].classList.add('white-mode-button')
+        todosLosBotones[i].classList.remove('dark-mode-button')
+      }
+    }
+
+  } else if (claseActual == "light-mode"){
+
+    var todasLasFotos = document.getElementsByTagName('img');
+    for(var i = 0; i < todasLasFotos.length ; i++) {
+      if (todasLasFotos[i].classList.contains('white-image')){
+        todasLasFotos[i].classList.add('none')
+      } else if (todasLasFotos[i].classList.contains('black-image')){
+        todasLasFotos[i].classList.remove('none')
+      }
+    }
+    var todosLosBotones = document.getElementsByTagName('button');
+      for(var i = 0; i < todosLosBotones.length ; i++) {
+      if (todosLosBotones[i].classList.contains('white-mode-button')){
+        todosLosBotones[i].classList.add('dark-mode-button')
+        todosLosBotones[i].classList.remove('white-mode-button')
+      }
+  }
+
+}
+}
+// ===============================================================================================================
 
 // ================================================ Formulario Si/No ==============================================================
-function myFunction() {
-  var checkBox = document.getElementById("respuesta");
-  var text = document.getElementById("text");
+// function myFunction() {
+//   var checkBox = document.getElementById("respuesta");
+//   var text = document.getElementById("text");
 
-  if (checkBox.checked == true) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
+//   if (checkBox.checked == true) {
+//     text.style.display = "block";
+//   } else {
+//     text.style.display = "none";
+//   }
+// }
 // ================================================ Fin Formulario Si/No ==============================================================
 
-// ================================================ Formulario tipo range ==============================================================
-var range = document.getElementById("rango");
-  var resp = document.getElementById("valor");
-  resp.innerHTML = range.value;
+ // ================================================ Formulario tipo range ==============================================================
+// var range = document.getElementById("rango");
+//   var resp = document.getElementById("valor");
+//   resp.innerHTML = range.value;
 
-rannge.oninput = function slider() {
-  resp.innerHTML = range.value;
-}
+// rannge.oninput = function slider() {
+//   resp.innerHTML = range.value;
+// }
 // ================================================ Fin Formulario tipo range ==============================================================

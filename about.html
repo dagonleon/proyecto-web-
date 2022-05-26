@@ -13,13 +13,14 @@
 	<script src="https://kit.fontawesome.com/6bc02a6bab.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="about" class="light">
+<body id="body" class="light light-mode">
 	<!-- menu -->
 	<nav class="navbar is-fixed-top">
 		<div class="container">
 			<div class="navbar-brand animated pulse">
 				<a href="#about" class="navbar-item" data-anchor="page-top" data-active="false">
-					<img src="./img/logo-black.png" alt="Logo CFTrainVET">
+					<img class="black-image"src="./img/logo-black.png" alt="Logo CFTrainVET">
+					<img class="white-image none" src="./img/logo-white.png" alt="Logo CFTrainVET">
 				</a>
 				<span class="navbar-burger burger animated pulse" data-target="navbarMenu">
 					<span></span>
@@ -38,20 +39,26 @@
 					<a class="navbar-item underline-animation" href="./activities.html">
 						activities
 					</a>
+					<div class="column is-vcentered">
+						<button class="dark-mode-button" type="button" onclick="toggleDarkLight()" title="Cambiar de modo"></button>
+						</div>
 				</div>
 			</div>
 		</div>
 	</nav>
 	<div class="navbar-end">
 	</div>
+
+	<section class="section-grey">
 	<div class="container is-max-desktop">
 		<h2 class="title is-1 has-text-centered">
-			<img src="./img/about-header.png" alt="about the project | cftrainvet erasmus+">
+			<img class="black-image" src="./img/about-header.png" alt="about the project | cftrainvet erasmus+">
+			<img class="white-image none" src="./img/about-header-white.png" alt="about the project | cftrainvet erasmus+">
 			<span class="para-seo">about the project | ctrainvet erasmus+</span>
 		</h2>
 	</div>
 	<!-- descripción -->
-	<section class="section">
+	
 		<div id="description">
 			<div class="container is-max-desktop">
 				<p class="has-text-centered title is-2">What is this project about?</p>
@@ -65,8 +72,8 @@
 				</h2>
 			</div>
 		</div>
-	</section>
-	<!-- círculos -->
+	
+	<!-- Datos -->
 	<div class="container is-max-desktop">
 		<div class="columns">
 			<div class="column has-text-centered">
@@ -95,11 +102,12 @@
 			</div>
 		</div>
 	</div>
-
 	<br><br><br><br>
+</section>
+	
 	<!-- timeline	 -->
 
-	<section class="section-grey" id="sdg">
+	<section class="section" id="sdg">
 		<br><br><br>
 		<div class="container is-max-desktop">
 			<h2 class="title is-1 has-text-centered">Sustainable development goals</h2>
@@ -138,11 +146,14 @@
 				</div>
 			</div>
 		</div>
-		</div>
 		<br><br><br><br><br><br>
 		
 	</section>
 	<!-- preguntas FAQ -->
+	
+	<section class="section-grey">
+	<br><br><br>
+	<h2 class="title is-1 has-text-centered">FAQ</h2>
 	<div class="wrapper">
 		<section class="details-group">
 		  <details class="details" open>
@@ -164,7 +175,7 @@
 		  <details class="details">
 			<summary class="details__summary">Settings</summary>
 			<div class="details__content">
-			  <p>asdf<7p>
+			  <p>asdf</p>
 			</div>
 		  </details>
 	  
@@ -176,6 +187,7 @@
 		  </details>
 		</section>
 	  </div>
+	</section>
 	  <!-- fin /preguntas FAQ -->
 	<!-- upbutton -->
 	<div class="progress-wrap">
