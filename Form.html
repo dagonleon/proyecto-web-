@@ -14,7 +14,7 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<!-- <link rel="stylesheet" href="https://cdn -->
 
-<body id="index" class="light" onload="rangeNum()">
+<body id="index" class="light">
 	<!-- header - (nav + hero) -->
 	<section id="top" class="hero is-grey is-fullheight has-background">
 		<!-- navigation menu -->
@@ -23,7 +23,8 @@
 			<div class="container">
 				<div class="navbar-brand animated pulse">
 					<a class="navbar-item" data-anchor="page-top" data-active="false">
-						<img src="/img/logo-black.png" alt="Logo CFTrainVET">
+							<img class="black-image" src="./img/logo-black.png" alt="Logo CFTrainVET">
+							<img class="white-image none" src="./img/logo-white.png" alt="Logo CFTrainVET">
 					</a>
 					<span class="navbar-burger burger animated pulse" data-target="navbarMenu">
 						<span></span>
@@ -45,6 +46,9 @@
 						<a class="navbar-item underline-animation" href="./activities.html">
 							activities
 						</a>
+						<div class="column is-vcentered">
+							<button class="dark-mode-button" type="button" onclick="toggleDarkLight()" title="Cambiar de modo"></button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -59,33 +63,34 @@
 		<!-- Start description + image-->
 		<form>
 			<h1>Formulario medio ambiental </h1>
-			<label name="name">Nombre: </label>
-			<input type="text" id="surname" name="surname" placeholder="Introduce tu nombre">
+
+			<label>Nombre: </label>
+			<input type="text" id="surname" name="surname" placeholder="Introduce tu nombre" required>
 			<br>
-			<label name="name">Apellido: </label>
-			<input type="text" id="name" name="name" placeholder="Introduce tu apellido">
+			<label>Apellido: </label>
+			<input type="text" id="name" name="name" placeholder="Introduce tu apellido" required>
 			<br>
 			<label name="gmail">Correo electronico: </label>
-			<input type="text" id="gmail" name="gmail" placeholder="Introduce tu correo electronico">
+			<input type="email" id="gmail" name="gmail" placeholder="Usuario@ejemplo.com" required>
 			<br>
-			<label name="fechaNac">Fecha de nacimiento</label>
-			<input type="date" name="fechaNac" value="fechaNac">
+			<label>Fecha de nacimiento</label>
+			<input type="date" name="fechaNac" value="fechaNac" required>
 			<br>
 			<br>
-			<label name="RangeEco">Del 0 al 10 que tan eco-friendly eres</label><br>
-			<input type="range" name="RangoEco" value="5" min="0" max="10" autocomplete="off" id="rango" list="valores">
+			<label>Del 0 al 10 que tan eco-friendly eres</label><br>
+			<input type="range" name="RangoEco" value="5" min="0" max="10" autocomplete="off" id="rango" list="valores" oninput="slider()">
 			<datalist id="valores">
-				<option>0</option>
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-				<option>7</option>
-				<option>8</option>
-				<option>9</option>
-				<option>10</option>
+				<option value="0">
+				<option value="1">
+				<option value="2">
+				<option value="3">
+				<option value="4">
+				<option value="5">
+				<option value="6">
+				<option value="7">
+				<option value="8">
+				<option value="9">
+				<option value="10">
 			</datalist>
 			<p>Valor: <span id="valor"></span></p>
 			<label>Formas o has formado parte de algun tipo de proyecto medio ambiental?</label>
@@ -96,6 +101,9 @@
 			
 			
 			<textarea id="text" style="display:none" rows="10" cols="80" placeholder="Cuentanos tu historia"></textarea>
+			<br>
+			<button id="enviar">Enviar</button>
+				
 		</form>
 		<script>
 			(function ($) {

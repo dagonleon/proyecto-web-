@@ -84,65 +84,83 @@ function toggleDarkLight() {
   claseActual = body.className
 
   // Cambiar las imagenes negras por unas en blanco
-  if (claseActual == "dark-mode"){
+  if (claseActual == "dark-mode") {
 
     var todasLasFotos = document.getElementsByTagName('img');
-    for(var i = 0; i < todasLasFotos.length ; i++) {
-      if (todasLasFotos[i].classList.contains('white-image')){
-        todasLasFotos[i].classList.remove('none')
-      } else if (todasLasFotos[i].classList.contains('black-image')){
-        todasLasFotos[i].classList.add('none')
+    for (var i = 0; i < todasLasFotos.length; i++) {
+      if (todasLasFotos[i].classList.contains('black-image')) {
+        todasLasFotos[i].classList.remove('black-image')
+        todasLasFotos[i].classList.add('white-image')
       }
     }
     var todosLosBotones = document.getElementsByTagName('button');
-      for(var i = 0; i < todosLosBotones.length ; i++) {
-      if(todosLosBotones[i].classList.contains('dark-mode-button')){
+    for (var i = 0; i < todosLosBotones.length; i++) {
+      if (todosLosBotones[i].classList.contains('dark-mode-button')) {
         todosLosBotones[i].classList.add('white-mode-button')
         todosLosBotones[i].classList.remove('dark-mode-button')
       }
     }
 
-  } else if (claseActual == "light-mode"){
+  } else if (claseActual == "light-mode") {
 
     var todasLasFotos = document.getElementsByTagName('img');
-    for(var i = 0; i < todasLasFotos.length ; i++) {
-      if (todasLasFotos[i].classList.contains('white-image')){
-        todasLasFotos[i].classList.add('none')
-      } else if (todasLasFotos[i].classList.contains('black-image')){
-        todasLasFotos[i].classList.remove('none')
+    for (var i = 0; i < todasLasFotos.length; i++) {
+      if (todasLasFotos[i].classList.contains('white-image')) {
+        todasLasFotos[i].classList.add('black-image')
+        todasLasFotos[i].classList.remove('white-image')
       }
     }
     var todosLosBotones = document.getElementsByTagName('button');
-      for(var i = 0; i < todosLosBotones.length ; i++) {
-      if (todosLosBotones[i].classList.contains('white-mode-button')){
+    for (var i = 0; i < todosLosBotones.length; i++) {
+      if (todosLosBotones[i].classList.contains('white-mode-button')) {
         todosLosBotones[i].classList.add('dark-mode-button')
         todosLosBotones[i].classList.remove('white-mode-button')
       }
-  }
+    }
 
-}
+  }
 }
 // ===============================================================================================================
 
 // ================================================ Formulario Si/No ==============================================================
-// function myFunction() {
-//   var checkBox = document.getElementById("respuesta");
-//   var text = document.getElementById("text");
+function myFunction() {
+  var checkBox = document.getElementById("respuesta");
+  var text = document.getElementById("text");
 
-//   if (checkBox.checked == true) {
-//     text.style.display = "block";
-//   } else {
-//     text.style.display = "none";
-//   }
-// }
+  if (checkBox.checked == true) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
 // ================================================ Fin Formulario Si/No ==============================================================
 
- // ================================================ Formulario tipo range ==============================================================
-// var range = document.getElementById("rango");
-//   var resp = document.getElementById("valor");
-//   resp.innerHTML = range.value;
+// ================================================ Formulario tipo range ==============================================================
+function slider() {
+  var range = document.getElementById("rango");
+  var resp = document.getElementById("valor");
+  resp.innerHTML = range.value;
 
-// rannge.oninput = function slider() {
-//   resp.innerHTML = range.value;
-// }
+
+  resp.innerHTML = range.value;
+}
 // ================================================ Fin Formulario tipo range ==============================================================
+// ================================================ Preguntas FAQ ==============================================================
+var acordion = document.getElementsByTagName('faq-accordion');
+
+var i;
+var len = acordion.length;
+for (i = 0; i < len; i++) {
+  acordion[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panal = this.nextElementSibling;
+    if (panal.style.maxHeight) {
+      panal.style.maxHeight = null;
+    } else {
+      panal.style.maxHeight = panal.scrollHeight + "px";
+    }
+  });
+}
+
+// ================================================ Fin Preguntas FAQe ==============================================================
+

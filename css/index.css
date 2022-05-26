@@ -26,91 +26,119 @@
 }
 @import url("https://fonts.googleapis.com/css?family=Oswald:300|Roboto:300,500");
 /* SECTION FAQ-ESTILOS */
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 24px;
-}
-p:last-child,
-ul:last-child,
-li:last-child {
-  margin-bottom: 0;
-}
-.wrapper {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 48px;
-}
-.details-group {
-  border: 1px solid #cfd8dc;
-  border-radius: 5px;
-  background-color: white;
+.content-cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.details {
-  overflow: hidden;
-  border-bottom: 1px solid #cfd8dc;
-  transition: height 300ms ease-in-out;
+/* FAQ card */
+/*================================================*/
+
+.faq-card {
+  background-color: #fff;
+  border-radius: 20px;
+
+  max-width: 500px;
+  margin-top: 90px;
+
+  box-shadow: 0px 60px 50px -25px rgba(0, 0, 0, 0.35);
 }
-.details:last-child {
-  border-bottom: 0;
-}
-.details__summary, .details__content {
-  padding: 24px;
-}
-.details__summary {
+
+/* FAQ card: imagenes */
+/*================================================*/
+
+.faq-ilustrations {
   position: relative;
-  list-style: none;
-  padding-left: 48px;
-  outline: 0;
-  cursor: pointer;
-  font-size: 1.4rem;
-  font-family: Oswald;
-  text-transform: uppercase;
-  transition: color 300ms ease-in-out;
 }
-[open] > .details__summary {
-  color: #00acc1;
-}
-.details__summary::-webkit-details-marker {
-  display: none;
-}
-.details__summary:before, .details__summary:after {
-  content: "";
+
+.faq-ilustrations .mobile.ilust {
   position: absolute;
+  top: -110px;
+  left: -30px;
+  right: 0;
 }
-.details__summary:before {
-  left: 20px;
-  top: 50%;
-  height: 2px;
-  margin-top: -1px;
-  width: 16px;
-  background: #00acc1;
+
+.mobile {
+  display: block;
+  margin: 0 auto;
 }
-.details__summary:after {
-  left: 28px;
-  top: 50%;
-  height: 16px;
-  margin-top: -8px;
-  width: 2px;
-  margin-left: -1px;
-  background: #00acc1;
-  transition: all 300ms ease-in-out;
+
+/* FAQ card: main */
+/*================================================*/
+
+.faq-content {
+  padding: 9px 25px 3rem;
 }
-[open] .details__summary:after {
-  opacity: 0;
-  transform: translateY(25%);
+
+.faq-content h1 {
+  font-size: 32px;
+  text-align: center;
 }
-.details__content {
-  padding-top: 0;
-  padding-left: 48px;
+
+.faq-accordion {
+  padding: 8px 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
 }
-.none {
-  display: none;
+
+/* FAQ card: main title */
+/*================================================*/
+
+/* checkbox tgg-title*/
+input.tgg-title {
+  appearance: unset;
+  all: unset;
 }
+
+.faq-accordion-title label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-accordion-title input {
+  font-size: 12px /*var(--font-size)*/;
+  font-weight: 400;
+
+}
+.faq-accordion-title span {
+  margin-left: auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* FAQ card: main content */
+/*================================================*/
+.faq-accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+}
+/* Effects */
+/*================================================*/
+
+/* main title, accordion title effects */
+.faq-accordion-title:hover label .tgg-title {
+  background-color: red;
+}
+/* onclick "" */
+.faq-accordion .tgg-title:checked + div > label > h2 {
+  font-weight: 700;
+}
+
+.faq-accordion .tgg-title:checked + div > label > span {
+  will-change: transform;
+  transform: rotate(180deg);
+}
+
+/* main content, acordion text effect */
+
+.faq-accordion .tgg-title:checked ~ .faq-accordion-content {
+  will-change: max-height;
+  max-height: 500px;
+}
+
+/* SECTION FAQ-ESTILOS */
+/* ===================================== Estilos dark mode  ====================================== */
 
 .dark-mode-button {
   background-image: url(../img/logos/white-mode/night.png);
@@ -134,9 +162,10 @@ li:last-child {
   margin-top: 3px;
 }
 
-/* SECTION FAQ-ESTILOS */
-/* ===================================== Estilos dark mode  ====================================== */
-/* Body */
+.white-image{
+  filter: invert();
+}
+
 body.dark-mode, body.dark-mode .navbar, body.dark-mode button{
   background-color: var(--bg-dark)!important;
 }
@@ -12377,4 +12406,20 @@ input[type="text"]:focus{
   outline: none;
   border-bottom: 2px solid black;
   width: 75%;
+}
+input[type="email"]{
+  font-size: 15px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #cac7c7;
+  transition: border-bottom 0.3s ease-in, width 0.8s ease-in-out;
+  transition-delay: 0.2s;
+  width: 40%;
+}
+input[type="email"]:focus{
+  outline: none;
+  border-bottom: 2px solid black;
+  width: 70%;
 }
