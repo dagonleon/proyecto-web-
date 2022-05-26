@@ -21,7 +21,7 @@
   --secondary-section-dark: #141414;
   --elements-dark:#121212;
   --text-primary-dark: #fff;
-  --text-secondary-dark: rgba(255, 255, 255, 0.7);
+  --text-secondary-dark: #7a7a7a;
 
 }
 @import url("https://fonts.googleapis.com/css?family=Oswald:300|Roboto:300,500");
@@ -111,35 +111,54 @@ li:last-child {
 .none {
   display: none;
 }
+
+.dark-mode-button {
+  background-image: url(../img/logos/white-mode/night.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 25px;
+  width: 25px;
+  border: none;
+  margin-top: 3px;
+}
+
+.white-mode-button {
+  background-image: url(../img/logos/dark-mode/day.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 25px;
+  width: 25px;
+  border: none;
+  margin-top: 3px;
+}
+
 /* SECTION FAQ-ESTILOS */
 /* ===================================== Estilos dark mode  ====================================== */
 /* Body */
-body.dark-mode, body.dark-mode .navbar {
+body.dark-mode, body.dark-mode .navbar, body.dark-mode button{
   background-color: var(--bg-dark)!important;
 }
-body.dark-mode button, body.dark-mode .section-grey, body.dark-mode .is-grey, body.dark-mode .footer-dark {
+body.dark-mode .section-grey, body.dark-mode .is-grey, body.dark-mode .footer-dark {
   background-color: var(--elements-dark)!important;
 }
 body.dark-mode .title, body.dark-mode a, body.dark-mode .icon-bk, body.dark-mode .box-title {
   color: var(--text-primary-dark);
 }
-body.dark-mode .subtitle, body.dark-mode .box-text {
+body.dark-mode .subtitle, body.dark-mode .box-text, body.dark-mode .column.has-text-centered p {
   color:var(--text-secondary-dark);
 }
-
+body.light-mode button {
+  background-color: var(--white);
+  color: var(--primary-text);
+}
 body.light-mode {
   background-color: var(--white);
   color: var(--primary-text);
 }
 body.light-mode a {
   color: #111;
-}
-body.light-mode button {
-  background-color: #111;
-  color: #eee;
-}
-body .dark-mode .navbar {
-  background-color: var(--bg-dark)!important;
 }
 
 @font-face {
