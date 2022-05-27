@@ -166,6 +166,45 @@ input.tgg-title {
   filter: invert();
 }
 
+.boton-form{
+  width: 100%;
+	padding: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	font-weight: bold;
+	border: 2px solid black;
+}
+.boton-form:hover{
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	background-color: #000;
+	color: #fff;
+}
+#actv1{
+    background-image: url("../img/activities/actv1.jpg");
+}
+#actv2{
+  background-image: url("../img/activities/actv2.jpg");
+}
+#actv3{
+  background-image: url("../img/activities/actv3.jpg");
+}
+#actv4{
+  background-image: url("../img/activities/actv4.jpg");
+}
+#actv5{
+  background-image: url("../img/activities/actv5.png");
+}
+#actv6{
+  background-image: url("../img/activities/actv6.png");
+}
+.icon-card {
+  width: 16px;
+  height: 16px;
+}
+
 body.dark-mode, body.dark-mode .navbar, body.dark-mode button{
   background-color: var(--bg-dark)!important;
 }
@@ -12388,11 +12427,11 @@ form{
   margin-top: 40px;
   margin-bottom: 40px;
   z-index: 2;
-  border: solid black;
   padding: 10px;
 }
 
 input[type="text"]{
+  background-color: #F6F6F6;
   font-size: 15px;
   padding-bottom: 5px;
   margin-top: 15px;
@@ -12406,9 +12445,10 @@ input[type="text"]{
 input[type="text"]:focus{
   outline: none;
   border-bottom: 2px solid black;
-  width: 75%;
+  width: 100%;
 }
 input[type="email"]{
+  background-color: #F6F6F6;
   font-size: 15px;
   padding-bottom: 5px;
   margin-top: 15px;
@@ -12422,7 +12462,7 @@ input[type="email"]{
 input[type="email"]:focus{
   outline: none;
   border-bottom: 2px solid black;
-  width: 70%;
+  width: 100%;
 }
 
 body .credit {

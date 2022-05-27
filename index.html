@@ -210,27 +210,29 @@
 			<img src="./img/ROADMAP.png" class="roadmap-desktop black-image" alt="Project roadmap">
 			<img src="./img/ROADMAP-mobile.png" class="roadmap-mobile black-image" alt="Project roadmap">
 		</div>
-		<br><br><br>
+		<br><br>
 	</section>
+	
+	<section class="section-grey">
+		<br><br>
+		<div class="container is-max-desktop">
+			<h2 class="title is-1 has-text-centered section-title">Formulario medioambiental</h2>
+		</div>
 	<div class="columns">
 		<div class="column is-one-fifths"></div>
 		<form class="column is-three-fifths" >
-			<h1 class="box-title">Formulario medio ambiental </h1>
-
-			<label class="box-title">Nombre: </label>
+			
 			<input type="text" id="surname" name="surname" placeholder="Introduce tu nombre" required>
 			<br>
-			<label class="box-title">Apellido: </label>
 			<input type="text" id="name" name="name" placeholder="Introduce tu apellido" required>
-			<br>
-			<label name="gmail" class="box-title">Correo electronico: </label>
-			<input type="email" id="gmail" name="gmail" placeholder="Usuario@ejemplo.com" required>
-			<br>
-			<label class="box-title">Fecha de nacimiento</label>
+			<br> 
+			<input type="email" id="gmail" name="gmail" placeholder="Introduce tu email p.ej. usuario@ejemplo.com" required>
+			<br><br>
+			<label class="title is-5">Fecha de nacimiento</label><br>
 			<input type="date" name="fechaNac" value="fechaNac" required>
 			<br>
 			<br>
-			<label class="box-title">Del 0 al 10 que tan eco-friendly eres</label><br>
+			<label class="title is-5">Del 0 al 10 que tan eco-friendly eres</label><br>
 			<input type="range" name="RangoEco" value="5" min="0" max="10" autocomplete="off" id="rango" list="valores" oninput="slider()">
 			<datalist id="valores">
 				<option value="0">
@@ -245,32 +247,22 @@
 				<option value="9">
 				<option value="10">
 			</datalist>
-			<p class="box-title">Valor: <span id="valor"></span></p>
-			<label class="box-title">Formas o has formado parte de algun tipo de proyecto medio ambiental?</label>
+			<p class="box-title">Valor: <span id="valor"></span></p><br>
+			<label class="title is-5">Formas o has formado parte de algun tipo de proyecto medio ambiental?</label>
 			<br>
 			<label class="box-title">Si </label><input type="radio" id="respuesta" value="si" name="FomarParte" onclick="myFunction()"><br>
 			<label class="box-title">No </label><input type="radio" id="respuesta" value="no" name="FomarParte" onclick="myFunction()">
-
+			<br>
 		
 		
 			<textarea id="text" style="display:none" rows="10" cols="80" placeholder="Cuentanos tu historia"></textarea>
 			<br>
-			<button id="enviar" class="box-title">Enviar</button>
-			
+			<button id="enviar" class="boton-form" type="submit">ENVIAR</button>
 		</form>
 		<div class="column"></div>
 	</div>
-
-	<!-- <section class="section section-grey">
-		
-		<div class="container is-max-desktop">
-
-			<h2 class="title is-1 has-text-centered">Otra sección a añadir</h2>
-		</div>
-
-		
-	</section> -->
-	
+	<br><br><br>
+	</section>
 
 	<!-- Go to top + Progress bar  -->
 	<div class="progress-wrap">
