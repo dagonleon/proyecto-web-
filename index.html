@@ -212,6 +212,54 @@
 		</div>
 		<br><br><br>
 	</section>
+	<div class="columns">
+		<div class="column is-one-fifths"></div>
+		<form class="column is-three-fifths" >
+			<h1 class="box-title">Formulario medio ambiental </h1>
+
+			<label class="box-title">Nombre: </label>
+			<input type="text" id="surname" name="surname" placeholder="Introduce tu nombre" required>
+			<br>
+			<label class="box-title">Apellido: </label>
+			<input type="text" id="name" name="name" placeholder="Introduce tu apellido" required>
+			<br>
+			<label name="gmail" class="box-title">Correo electronico: </label>
+			<input type="email" id="gmail" name="gmail" placeholder="Usuario@ejemplo.com" required>
+			<br>
+			<label class="box-title">Fecha de nacimiento</label>
+			<input type="date" name="fechaNac" value="fechaNac" required>
+			<br>
+			<br>
+			<label class="box-title">Del 0 al 10 que tan eco-friendly eres</label><br>
+			<input type="range" name="RangoEco" value="5" min="0" max="10" autocomplete="off" id="rango" list="valores" oninput="slider()">
+			<datalist id="valores">
+				<option value="0">
+				<option value="1">
+				<option value="2">
+				<option value="3">
+				<option value="4">
+				<option value="5">
+				<option value="6">
+				<option value="7">
+				<option value="8">
+				<option value="9">
+				<option value="10">
+			</datalist>
+			<p class="box-title">Valor: <span id="valor"></span></p>
+			<label class="box-title">Formas o has formado parte de algun tipo de proyecto medio ambiental?</label>
+			<br>
+			<label class="box-title">Si </label><input type="radio" id="respuesta" value="si" name="FomarParte" onclick="myFunction()"><br>
+			<label class="box-title">No </label><input type="radio" id="respuesta" value="no" name="FomarParte" onclick="myFunction()">
+
+		
+		
+			<textarea id="text" style="display:none" rows="10" cols="80" placeholder="Cuentanos tu historia"></textarea>
+			<br>
+			<button id="enviar" class="box-title">Enviar</button>
+			
+		</form>
+		<div class="column"></div>
+	</div>
 
 	<!-- <section class="section section-grey">
 		

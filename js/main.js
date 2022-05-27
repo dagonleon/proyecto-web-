@@ -1,3 +1,7 @@
+document.querySelector(".option").click(function () {
+  document.querySelector(".option").classList.remove("active");
+  document.querySelector(this).classList.add("active");
+});
 // ================================================ Menú hamburguesa ===============================================
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -146,8 +150,7 @@ function slider() {
 }
 // ================================================ Fin Formulario tipo range ==============================================================
 // ================================================ Preguntas FAQ ==============================================================
-var acordion = document.getElementsByTagName('faq-accordion');
-
+var acordion = document.getElementsByTagName("faq-accordion");
 var i;
 var len = acordion.length;
 for (i = 0; i < len; i++) {
@@ -161,6 +164,6 @@ for (i = 0; i < len; i++) {
     }
   });
 }
-
 // ================================================ Fin Preguntas FAQe ==============================================================
+
 
