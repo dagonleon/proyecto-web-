@@ -1,6 +1,7 @@
-document.querySelector(".option").click(function () {
-  document.querySelector(".option").classList.remove("active");
-  document.querySelector(this).classList.add("active");
+$(".option").click(function(){
+  $(".option").removeClass("active");
+  $(this).addClass("active");
+  
 });
 // ================================================ Menú hamburguesa ===============================================
 document.addEventListener('DOMContentLoaded', () => {
